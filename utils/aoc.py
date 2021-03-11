@@ -5,7 +5,7 @@ __all__ = ['dimensions', 'Dim']
 # Cell
 import pandas as pd
 from collections import namedtuple
-1=1
+
 Dim = namedtuple('Dim',['min','max','range'])
 def dimensions(obj):
     """
