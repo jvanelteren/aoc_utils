@@ -2,7 +2,7 @@
 > Summary test
 
 
-This file will become your README and also the index of your documentation.
+This small change file will become your README and also the index of your documentation.
 
 ## Install
 
