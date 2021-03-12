@@ -6,6 +6,19 @@ __all__ = ['to_int', 'flatten', 'md5', 'arr_to_dict', 'reverse_dict', 'untar_dat
            'find_repeat', 'find_cycle', 'factors']
 
 # Cell
+from collections.abc import Iterable
+from collections import namedtuple, deque
+import contextlib
+import copy
+from functools import reduce
+import hashlib
+import heapq
+import logging
+from math import sqrt, gcd
+from pathlib import Path
+import time
+
+import pandas as pd
 import numpy as np
 
 # Cell
@@ -30,7 +43,6 @@ def to_int(inp):
     else: return list(out)
 
 # Cell
-from collections.abc import Iterable
 
 def flatten(x):
     # recursive flattens the input. Returns a list
@@ -44,7 +56,6 @@ def _flatten(x):
             yield item
 
 # Cell
-import hashlib
 def md5(input):
     return hashlib.md5(input.encode('utf-8')).hexdigest()
 
@@ -66,7 +77,6 @@ def reverse_dict(d):
     return {v:k for k,v in d.items()}
 
 # Cell
-from pathlib import Path
 def untar_data(path, save_dir = None):
     # will untar a file to save dir or the directory of path
     if isinstance(path,Path):
@@ -77,9 +87,6 @@ def untar_data(path, save_dir = None):
         print('argument should be Path instance')
 
 # Cell
-import logging
-import contextlib
-import time
 logging.getLogger().setLevel(logging.INFO)
 @contextlib.contextmanager
 def timeit(description=None):
@@ -142,8 +149,6 @@ def arr_neighbors(arr, diag=True, inc_self=False):
 
 
 # Cell
-import pandas as pd
-from collections import namedtuple
 
 Dim = namedtuple('Dim',['min','max','range'])
 def dimensions(obj):
@@ -230,7 +235,6 @@ def conv1d(arr,conv_shape,mode='same',padding=None,pad_dir='center') ->list:
 
 
 # Cell
-import numpy as np
 def conv2d(arr,conv_shape,mode='valid',padding=None,pad_dir='center') ->list:
     """
     Returns a list of kernel views of a string or list
@@ -322,7 +326,6 @@ def deduce_matches(input_dict, option_type=str):
     return input_dict
 
 # Cell
-from collections import deque
 def bfs(connections, start, goal=None):
     """
     Requires a connections dict with tuples with neighbors per node.
@@ -369,7 +372,6 @@ def bfs(connections, start, goal=None):
     else: return parents
 
 # Cell
-import heapq
 def dijkstra(connections,start, goal=None):
     """
     Requires a dict with as values a LIST of tuples (neighbor, weight)
@@ -440,8 +442,6 @@ def dfs(graph, start):
     return visited
 
 # Cell
-import numpy as np
-import copy
 def find_pattern_in_iter(start_pattern, function, goal = None, n_iter=1000000000):
     """
         Returns when a SPECIFIED pattern has been found from a function
@@ -483,8 +483,6 @@ def find_cycle(start_pattern, function):
     return step_second - step_first
 
 # Cell
-from math import sqrt
-from functools import reduce
 def factors(n):
     """
      return set of divisors of a number
