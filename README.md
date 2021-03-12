@@ -1,24 +1,26 @@
-# This is a sentence
-> Summary test
+# My personal AoC lib
+> Also doing this to tryout nbdev and packaging in general
 
 
-This file will become your README and also the index of your documentation.
+Have fun with this package
 
 ## Install
 
-`pip install aoc-utils`
+Haven't uploaded to pypi yet. For now run git clone and if you want to install locally
+`pip install . -e aoc_utils` (when in root aoc_utils directory)
 
 ## How to use
 
-Fill me in please! Don't forget code examples:
+Just do as follows:
 
 ```
-1+1
+from aoc_utils.aoc import *
+aoc.to_int(['22222', 'aaaaa', 22222])
 ```
 
 
 
 
-    2
+    [22222, 'aaaaa', 22222]
 
 

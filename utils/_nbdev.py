@@ -3,15 +3,30 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"to_int": "00_core.ipynb",
+         "flatten": "00_core.ipynb",
+         "md5": "00_core.ipynb",
+         "arr_to_dict": "00_core.ipynb",
+         "reverse_dict": "00_core.ipynb",
+         "untar_data": "00_core.ipynb",
+         "timeit": "00_core.ipynb",
+         "nan_inspect": "00_core.ipynb",
+         "neighbors": "00_core.ipynb",
+         "arr_neighbors": "00_core.ipynb",
          "dimensions": "00_core.ipynb",
          "Dim": "00_core.ipynb",
          "positive": "00_core.ipynb",
          "manhattan": "00_core.ipynb",
+         "conv1d": "00_core.ipynb",
+         "conv2d": "00_core.ipynb",
          "binarysearch": "00_core.ipynb",
+         "deduce_matches": "00_core.ipynb",
          "bfs": "00_core.ipynb",
          "dijkstra": "00_core.ipynb",
          "get_path": "00_core.ipynb",
          "dfs": "00_core.ipynb",
+         "find_pattern_in_iter": "00_core.ipynb",
+         "find_repeat": "00_core.ipynb",
+         "find_cycle": "00_core.ipynb",
          "factors": "00_core.ipynb"}
 
 modules = ["aoc.py"]
