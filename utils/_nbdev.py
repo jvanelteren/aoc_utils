@@ -2,12 +2,17 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"dimensions": "00_core.ipynb",
+index = {"to_int": "00_core.ipynb",
+         "dimensions": "00_core.ipynb",
          "Dim": "00_core.ipynb",
          "positive": "00_core.ipynb",
          "manhattan": "00_core.ipynb",
          "binarysearch": "00_core.ipynb",
-         "bfs": "00_core.ipynb"}
+         "bfs": "00_core.ipynb",
+         "dijkstra": "00_core.ipynb",
+         "get_path": "00_core.ipynb",
+         "dfs": "00_core.ipynb",
+         "factors": "00_core.ipynb"}
 
 modules = ["aoc.py"]
 
