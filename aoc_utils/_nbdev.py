@@ -33,6 +33,6 @@ modules = ["aoc.py"]
 
 doc_url = "https://jvanelteren.github.io/aoc_utils/"
 
-git_url = "https://github.com/jvanelteren/aoc_utils/tree/branch/"
+git_url = "https://github.com/jvanelteren/aoc_utils/tree/main/"
 
 def custom_doc_links(name): return None
