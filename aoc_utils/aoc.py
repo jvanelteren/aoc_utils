@@ -6,6 +6,9 @@ __all__ = ['to_int', 'flatten', 'md5', 'arr_to_dict', 'reverse_dict', 'untar_dat
            'find_repeat', 'find_cycle', 'factors']
 
 # Cell
+import numpy as np
+
+# Cell
 def to_int(inp):
     """
         returns items converted to int if possible also works for tuples\n
