@@ -1,7 +1,7 @@
 repository: jvanelteren/aoc-utils
 output: web
-topnav_title: aoc_utils
-site_title: aoc_utils
+topnav_title: aocutils
+site_title: aocutils
 company_name: Jesse van Elteren
 description: A description of your project
 # Set to false to disable KaTeX math
