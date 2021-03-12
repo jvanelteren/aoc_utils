@@ -15,7 +15,7 @@ Just do as follows:
 
 ```
 from aoc_utils.aoc import *
-aoc.to_int(['22222', 'aaaaa', 22222])
+to_int(['22222', 'aaaaa', 22222])
 ```
 
 
