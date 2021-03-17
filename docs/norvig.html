@@ -47,7 +47,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="data" class="doc_header"><code>data</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L623" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>data</code>(<strong><code>day</code></strong>:<code>int</code>, <strong><code>parser</code></strong>=<em><code>str</code></em>, <strong><code>sep</code></strong>=<em><code>'\n'</code></em>)</p>
+<h4 id="data" class="doc_header"><code>data</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L618" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>data</code>(<strong><code>day</code></strong>:<code>int</code>, <strong><code>parser</code></strong>=<em><code>str</code></em>, <strong><code>sep</code></strong>=<em><code>'\n'</code></em>)</p>
 </blockquote>
 <p>Split the day's input file into sections separated by <code>sep</code>, and apply <code>parser</code> to each.</p>
 
@@ -72,7 +72,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="do" class="doc_header"><code>do</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L628" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>do</code>(<strong><code>day</code></strong>, <strong>*<code>answers</code></strong>)</p>
+<h4 id="do" class="doc_header"><code>do</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L623" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>do</code>(<strong><code>day</code></strong>, <strong>*<code>answers</code></strong>)</p>
 </blockquote>
 <p>E.g., do(3) returns {1: day3_1(in3), 2: day3_2(in3)}. Verifies <code>answers</code> if given.</p>
 
@@ -104,7 +104,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="quantify" class="doc_header"><code>quantify</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L642" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>quantify</code>(<strong><code>iterable</code></strong>, <strong><code>pred</code></strong>=<em><code>bool</code></em>)</p>
+<h4 id="quantify" class="doc_header"><code>quantify</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L637" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>quantify</code>(<strong><code>iterable</code></strong>, <strong><code>pred</code></strong>=<em><code>bool</code></em>)</p>
 </blockquote>
 <p>Count the number of items in iterable for which pred is true.</p>
 
@@ -122,6 +122,33 @@ nb_path: "02_norvig.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<span class="n">intchecker</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
+<span class="k">assert</span> <span class="n">quantify</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;11&#39;</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">],</span> <span class="n">pred</span><span class="o">=</span><span class="n">intchecker</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="n">quantify</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">==</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -129,7 +156,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="first" class="doc_header"><code>first</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L646" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>first</code>(<strong><code>iterable</code></strong>, <strong><code>default</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="first" class="doc_header"><code>first</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L642" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>first</code>(<strong><code>iterable</code></strong>, <strong><code>default</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Return first item in iterable, or default.</p>
 
@@ -147,20 +174,21 @@ nb_path: "02_norvig.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="rest" class="doc_header"><code>rest</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L650" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rest</code>(<strong><code>sequence</code></strong>)</p>
-</blockquote>
-
 </div>
+    {% endraw %}
 
-</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">first</span><span class="p">([],</span> <span class="n">default</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="n">first</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">default</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -178,7 +206,55 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="multimap" class="doc_header"><code>multimap</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L652" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>multimap</code>(<strong><code>items</code></strong>:<code>Iterable[Tuple]</code>)</p>
+<h4 id="rest" class="doc_header"><code>rest</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L647" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rest</code>(<strong><code>sequence</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">rest</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="multimap" class="doc_header"><code>multimap</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L650" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>multimap</code>(<strong><code>items</code></strong>:<code>Iterable</code>[<code>Tuple</code>])</p>
 </blockquote>
 <p>Given (key, val) pairs, return {key: [val, ....], ...}.</p>
 
@@ -196,6 +272,74 @@ nb_path: "02_norvig.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="n">char</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">))}</span>
+<span class="n">multimap</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defaultdict(list,
+            {0: [&#39;A&#39;],
+             1: [&#39;B&#39;],
+             2: [&#39;C&#39;],
+             3: [&#39;D&#39;],
+             4: [&#39;E&#39;],
+             5: [&#39;F&#39;],
+             6: [&#39;G&#39;],
+             7: [&#39;H&#39;],
+             8: [&#39;I&#39;],
+             9: [&#39;J&#39;],
+             10: [&#39;K&#39;],
+             11: [&#39;L&#39;],
+             12: [&#39;M&#39;],
+             13: [&#39;N&#39;],
+             14: [&#39;O&#39;],
+             15: [&#39;P&#39;],
+             16: [&#39;Q&#39;],
+             17: [&#39;R&#39;],
+             18: [&#39;S&#39;],
+             19: [&#39;T&#39;],
+             20: [&#39;U&#39;],
+             21: [&#39;V&#39;],
+             22: [&#39;W&#39;],
+             23: [&#39;X&#39;],
+             24: [&#39;Y&#39;],
+             25: [&#39;Z&#39;]})</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -203,7 +347,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="prod" class="doc_header"><code>prod</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L659" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prod</code>(<strong><code>numbers</code></strong>)</p>
+<h4 id="prod" class="doc_header"><code>prod</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L658" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>prod</code>(<strong><code>numbers</code></strong>)</p>
 </blockquote>
 <p>The product of an iterable of numbers.</p>
 
@@ -221,17 +365,51 @@ nb_path: "02_norvig.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ints</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="s2">&quot;Return a tuple of all the integers in text.&quot;</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;-?[0-9]+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ints</span><span class="p">(</span><span class="s1">&#39;abd11d434&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="ints" class="doc_header"><code>ints</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L666" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ints</code>(<strong><code>text</code></strong>:<code>str</code>)</p>
-</blockquote>
-<p>Return a tuple of all the integers in text.</p>
 
+<div class="output_text output_subarea output_execute_result">
+<pre>(11, 434)</pre>
 </div>
 
 </div>
@@ -253,32 +431,7 @@ nb_path: "02_norvig.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="atoms" class="doc_header"><code>atoms</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L670" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atoms</code>(<strong><code>text</code></strong>:<code>str</code>, <strong><code>ignore</code></strong>=<em><code>''</code></em>, <strong><code>sep</code></strong>=<em><code>None</code></em>)</p>
-</blockquote>
-<p>Parse text into atoms (numbers or strs), possibly ignoring a regex.</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="atom" class="doc_header"><code>atom</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L676" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atom</code>(<strong><code>text</code></strong>:<code>str</code>)</p>
+<h4 id="atom" class="doc_header"><code>atom</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L667" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atom</code>(<strong><code>text</code></strong>:<code>str</code>)</p>
 </blockquote>
 <p>Parse text into a single float or int or str.</p>
 
@@ -302,8 +455,79 @@ nb_path: "02_norvig.ipynb"
 <div class="output_area">
 
 
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dotproduct" class="doc_header"><code>dotproduct</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L684" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dotproduct</code>(<strong><code>A</code></strong>, <strong><code>B</code></strong>)</p>
+<h4 id="atoms" class="doc_header"><code>atoms</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L678" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>atoms</code>(<strong><code>text</code></strong>:<code>str</code>, <strong><code>ignore</code></strong>=<em><code>''</code></em>, <strong><code>sep</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+<p>Parse text into atoms (numbers or strs), possibly ignoring a regex.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;abc&#39;, 111, &#39;def&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="dotproduct" class="doc_header"><code>dotproduct</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L686" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dotproduct</code>(<strong><code>A</code></strong>, <strong><code>B</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -326,11 +550,57 @@ nb_path: "02_norvig.ipynb"
 <div class="output_area">
 
 
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="mapt" class="doc_header"><code>mapt</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L686" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mapt</code>(<strong><code>fn</code></strong>, <strong>*<code>args</code></strong>)</p>
+<h4 id="mapt" class="doc_header"><code>mapt</code><a href="https://github.com/jvanelteren/aoc_utils/tree/main/aoc_utils/aoc.py#L691" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mapt</code>(<strong><code>fn</code></strong>, <strong>*<code>args</code></strong>)</p>
 </blockquote>
 <p>map(fn, *args) and return the result as a tuple.</p>
 
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;az&#39;, &#39;bz&#39;, &#39;cz&#39;, &#39;dz&#39;, &#39;ez&#39;)</pre>
 </div>
 
 </div>
