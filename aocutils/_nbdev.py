@@ -2,7 +2,10 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"to_int": "00_core.ipynb",
+index = {"load": "00_core.ipynb",
+         "save": "00_core.ipynb",
+         "DATA_DIR": "00_core.ipynb",
+         "to_int": "00_core.ipynb",
          "flatten": "02_norvig.ipynb",
          "md5": "00_core.ipynb",
          "arr_to_dict": "00_core.ipynb",
