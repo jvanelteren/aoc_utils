@@ -6,7 +6,7 @@ index = {"load": "00_core.ipynb",
          "save": "00_core.ipynb",
          "DATA_DIR": "00_core.ipynb",
          "to_int": "00_core.ipynb",
-         "flatten": "02_norvig.ipynb",
+         "flatten": "00_core.ipynb",
          "md5": "00_core.ipynb",
          "arr_to_dict": "00_core.ipynb",
          "reverse_dict": "00_core.ipynb",
@@ -30,30 +30,9 @@ index = {"load": "00_core.ipynb",
          "find_pattern_in_iter": "00_core.ipynb",
          "find_repeat": "00_core.ipynb",
          "find_cycle": "00_core.ipynb",
-         "factors": "00_core.ipynb",
-         "CFG": "01_context_free_grammar.ipynb",
-         "cfg": "01_context_free_grammar.ipynb",
-         "data": "02_norvig.ipynb",
-         "do": "02_norvig.ipynb",
-         "quantify": "02_norvig.ipynb",
-         "first": "02_norvig.ipynb",
-         "rest": "02_norvig.ipynb",
-         "multimap": "02_norvig.ipynb",
-         "prod": "02_norvig.ipynb",
-         "ints": "02_norvig.ipynb",
-         "test": "02_norvig.ipynb",
-         "atom": "02_norvig.ipynb",
-         "atoms": "02_norvig.ipynb",
-         "list_atoms": "02_norvig.ipynb",
-         "dotproduct": "02_norvig.ipynb",
-         "mapt": "02_norvig.ipynb",
-         "cat": "02_norvig.ipynb",
-         "Char": "02_norvig.ipynb",
-         "zippify": "02_norvig.ipynb"}
+         "factors": "00_core.ipynb"}
 
-modules = ["aoc.py",
-           "aoccfg.py",
-           "aocnorvig.py"]
+modules = ["aoc.py"]
 
 doc_url = "https://jvanelteren.github.io/aocutils/"
 

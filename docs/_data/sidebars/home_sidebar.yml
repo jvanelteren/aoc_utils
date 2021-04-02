@@ -12,12 +12,6 @@ entries:
     - output: web,pdf
       title: Advent of Code Utils
       url: core.html
-    - output: web,pdf
-      title: Context free grammar
-      url: context_free_grammar.html
-    - output: web,pdf
-      title: Peter Norvig AoC helper functions
-      url: norvig.html
     output: web
     title: aocutils
   output: web
