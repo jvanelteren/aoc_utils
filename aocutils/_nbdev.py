@@ -51,9 +51,7 @@ index = {"load": "00_core.ipynb",
          "Char": "02_norvig.ipynb",
          "zippify": "02_norvig.ipynb"}
 
-modules = ["aoc.py",
-           "aoccfg.py",
-           "aocnorvig.py"]
+modules = ["aoc.py"]
 
 doc_url = "https://jvanelteren.github.io/aocutils/"
 
